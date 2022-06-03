@@ -14,6 +14,9 @@ const getBatchInfo = function() {
   console.log(batchInformation)
 }
 
+const endpoint = "https://www.functionup.org"
+
 module.exports.printDate = printDate
 module.exports.getCurrentMonth = printMonth
 module.exports.getCohortData = getBatchInfo
+module.exports.endpoint = endpoint
