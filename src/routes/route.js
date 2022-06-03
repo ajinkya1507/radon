@@ -62,7 +62,7 @@ router.get('/movies', function (req,res){
 
 router.get('/movies/:indexNumber', function (req,res){
     let movies = ["The dark knight","inception","tenet","the prestige","interstellar"]
-    if(req.params.indexNumber>4){
+    if(req.params.indexNumber>movies.length){
         res.send("error invalid index number enter number betweent 0 to 4")
     }else{
         res.send(movies[req.params.indexNumber])
@@ -105,8 +105,8 @@ router.get('/films/:filmId', function (req,res){
     
       }
     ]
-if(req.params.films <4 && req.params.files === 0){
-    res.send("enter valid id that is between 1 to 4")
+if(req.params.filmId >films.length || req.params.filmId == 0){
+    res.send("no movie exists between this id enter number between 1 to 4")
 }else{
     res.send(films[req.params.filmId-1])
 }
